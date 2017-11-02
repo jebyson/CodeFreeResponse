@@ -22,13 +22,17 @@ public class Code {
         part = myCode.substring(p1, p2);
         ch = new char[myCode.length()];
         ch = part.toCharArray();
+
         for(int i = 0; i < ch.length; i++)
         {
             ch[i] = 'X';
         }
-        for (char j : ch) {
-            myCodeThree += "" + j;
+
+        for (char j : ch)
+        {
+            myCodeThree += j;
         }
+
         myCode = myCodeTwo.substring(0, p1) + myCodeThree + myCodeTwo.substring(p2, myCodeTwo.length());
     }
 
