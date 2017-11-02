@@ -19,9 +19,9 @@ public class Code {
 
     public void hide(int p1, int p2)
     {
-        part = myCode.substring(p1, p2);
+        //part = myCode.substring(p1, p2);
         ch = new char[myCode.length()];
-        ch = part.toCharArray();
+        ch = myCode.substring(p1, p2).toCharArray();
 
         for(int i = 0; i < ch.length; i++)
         {
@@ -31,6 +31,7 @@ public class Code {
         for (char j : ch)
         {
             myCodeThree += j;
+            myCodeThree = myCodeThree.replace("null", "");
         }
 
         myCode = myCodeTwo.substring(0, p1) + myCodeThree + myCodeTwo.substring(p2, myCodeTwo.length());
@@ -38,7 +39,6 @@ public class Code {
 
     public void recover(int p1, int p2)
     {
-        myCodeTwo += "";
         myCode = myCodeTwo;
     }
 
